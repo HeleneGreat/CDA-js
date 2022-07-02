@@ -1,0 +1,32 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Des bolées de cidre pour un CDA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- The user enters a number in the input -->
+    <label for="quantity">Nombre de bolées désirées :</label>
+    <input type="number" id="quantity" name="nbBolee" placeholder="Nombre de bolées" max="0" min="99" step="1">
+
+    <!-- The song is displayed when the button is clicked -->
+    <button id="btn-song">Chante-moi ça !</button>
+
+
+    <!-- The two parts of the song are display here : -->
+    <div id="display-song">
+        <p id="part-one"></p>
+        <p id="part-two"></p>
+    </div>
+
+
+
+
+</body>
+
+<script src="song.js"></script>
+
+</html>
