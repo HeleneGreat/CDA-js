@@ -6,21 +6,26 @@ btn.addEventListener('click', function(){
     let partTwo = document.getElementById('part-two');
     let nb = document.getElementById("quantity").value;
 
-    // If the number entered is positif
-    if(nb > 0){
+    // In case no number is entered
+    if(nb === ""){
+        partOne.innerText = "Si tu ne renseigne pas de quantité, je ne peux pas chanter !";
+        partTwo.innerText = "";
+    // If the number entered is between 0 and 99 included
+    }else if(nb > 0 && nb <= 99){
         partOne.innerText = songPartOne(nb);
         partTwo.innerText = songPartTwo(nb - 1);
     // If the number if zero, the song is different
     }else if(nb == 0){
         partOne.innerText = "Plus de bolées de cidre sur le mur, plus de bolées sans alcool.";
         partTwo.innerText = "Vas au supermarché pour en acheter, 99 bolées de cidre sur le mur.";
-    // In case no number is entered
-    }else{
-        partOne.innerText = "Si tu ne renseigne pas de quantité, je ne peux pas chanter !"; 
+    // If the number is not within 0 and 99
+    }else if(nb < 0 || nb > 99){
+        partOne.innerText = "La quantité doit être comprise entre 0 et 99.";
         partTwo.innerText = "";
     }
   
 });
+
 
 // First line of the song
 function songPartOne(nb){
@@ -29,7 +34,6 @@ function songPartOne(nb){
         nb = "plus de";
     }
     return nb + " bolée" + accord + " de cidre sur le mur, " + nb + " bolée" + accord + " sans alcool.";
-    
 }
 
 // Second line of the song
@@ -39,7 +43,6 @@ function songPartTwo(newNb){
         newNb = "Plus de";
     }
     return "Bois en un et au suivant ! " + newNb + " bolée" + accord + " de cidre sur le mur.";
-
 }
 
 // Decides whether the word "bolée" is plural or singular
