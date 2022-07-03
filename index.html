@@ -4,24 +4,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Des bolées de cidre pour un CDA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <!-- The user enters a number in the input -->
-    <label for="quantity">Nombre de bolées désirées :</label>
-    <input type="number" id="quantity" name="nbBolee" placeholder="Nombre de bolées" max="99" min="0" step="1" style="width:150px;">
+    <main>
+    <section id="nb">
+        <!-- The user enters a number in the input -->
+        <label for="quantity">Nombre de bolées désirées :</label>
+        <input type="number" id="quantity" name="nbBolee" placeholder="Nombre de bolées" max="99" min="0" step="1">
 
-    <!-- The song is displayed when the button is clicked -->
-    <button id="btn-song">Chante-moi ça !</button>
-
-
-    <!-- The two parts of the song are display here : -->
-    <div id="display-song">
-        <p id="part-one"></p>
-        <p id="part-two"></p>
-    </div>
+        <!-- The song is displayed when the button is clicked -->
+        <button id="btn-song">Chante-moi ça !</button>
+    </section>
 
 
+    <section id="song">
+        <!-- The two parts of the song are display here : -->
+        <span class="quote quote-left display-none"><i class="fa-solid fa-quote-left"></i></span>
+        <div id="display-song">
+            <p id="part-one"></p>
+            <p id="part-two"></p>
+        </div>
+        <span class="quote quote-right display-none"><i class="fa-solid fa-quote-right"></i></span>
+    </section>
+</main>
 
 
 </body>

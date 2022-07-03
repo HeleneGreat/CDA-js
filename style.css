@@ -1,0 +1,75 @@
+:root {
+    --green: #8bc34a;
+    --pink: #ef00ff;
+}
+
+body{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--green);
+    color: var(--pink);
+    font-size: 25px;
+}
+
+main{
+    width: fit-content;
+    margin: 0 auto;
+    padding-top: 10%;
+}
+
+input#quantity{
+    width: 180px;
+    margin: 0 30px;
+    padding: 0 20px;
+    height: 53px;
+    border: var(--pink) solid 1px;
+}
+
+button{
+    border: none;
+    padding: 15px 20px;
+    background-color: var(--pink);
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+#nb{    
+    font-weight: bold;
+}
+
+#song{
+    margin-top: 110px;
+    text-align: center;
+    color: rgb(65, 61, 61);
+}
+
+i{
+    color: var(--pink);
+    font-size: 3rem;
+}
+
+#song{
+    position: relative;
+}
+
+.display-none{
+    display: none;
+}
+
+.quote-left{
+    position: absolute;
+    top: -60px;
+    left: -10px;
+}
+
+.quote-right{
+    position: absolute;
+    bottom: -60px;
+    right: -10px;
+}
